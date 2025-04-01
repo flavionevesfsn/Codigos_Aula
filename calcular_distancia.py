@@ -4,13 +4,6 @@ import math
 def calcular_distancia(caminho, matriz_distancias):
     return sum(matriz_distancias[caminho[i-1]][caminho[i]] for i in range(len(caminho)))
 
-# matriz = [
-#     [0, 10, 15, 20],
-#     [10, 0, 35, 25],
-#     [15, 35, 0, 30],
-#     [20, 25, 30, 0]
-# ]
-
 def simulated_annealing(matriz_distancias, temperatura=1000, resfriamento=0.99):
     num_cidades = len(matriz_distancias)
     caminho_atual = list(range(num_cidades))
